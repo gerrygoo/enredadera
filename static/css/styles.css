@@ -1,5 +1,10 @@
 html { overflow:auto; }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 body {
   margin: 0;
 
@@ -45,6 +50,10 @@ body {
   min-height: 100%;
 }
 
+.guia-v {
+  display: none;
+}
+
 /* vertical, aspect chiquito */
 @media (max-aspect-ratio: 9/16) {
   .video_h {
@@ -61,6 +70,12 @@ body {
   .nav .link {
   	padding-left: 2%;
   }
+  .guia-v {
+    display: inline;
+  }
+	.guia-h {
+    display: none;
+	}
 }
 
 /* horizontal, aspect grande */
