@@ -55,7 +55,11 @@ body {
   	display: inline;
   }
   .nav {
-    font-size: xx-large;
+    font-size: x-large;
+		flex-flow: column;
+  }
+  .nav .link {
+  	padding-left: 2%;
   }
 }
 
