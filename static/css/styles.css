@@ -29,6 +29,10 @@ body {
 	padding-left: 2%;
 }
 
+video {
+  background: white;
+}
+
 /* fondo video */
 .video_contain {
   position: absolute;
