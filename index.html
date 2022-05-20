@@ -15,11 +15,14 @@
 
 <body>
 	<div class="video_contain">
+    <img src="./static/img/stat_h.png" class="img_h hidden">
+    <img src="./static/img/stat_v.png" class="img_v hidden">
+
     <video playsinline class="video_h" autoplay muted loop webkit-playsinline>	
-      <source src="https://firebasestorage.googleapis.com/v0/b/knowledge-base-9e0f8.appspot.com/o/enredadera_web_horiz.webm?alt=media&token=97ba6fad-c833-4895-9f0c-370b2a4e0e05">	 
+      <source src="./static/video/enredadera_web_horiz.webm" type="video/webm">	 
 		</video>
     <video playsinline class="video_v" autoplay muted loop webkit-playsinline>	
-      <source src="./static/video/enredadera_web_vert.webm">	 
+      <source src="./static/video/enredadera_web_vert.webm" type="video/webm">	 
       <source src="./static/img/stat_v.png">	 
 		</video>
 	</div>
@@ -34,5 +37,16 @@
 				<a href="./static/zip/imprimibles.zip">IMPRIMIBLES</a>
 		</div>
 	</div>
+	<script>
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+    if (isSafari) {
+      const vids = document.getElementsByTagName('video')
+      for (const vid of vids) vid.className = 'hidden'
+
+      const imgs = document.getElementsByTagName('img')
+      console.log(imgs)
+      for (const img of imgs) img.className = img.className.replace('hidden', '').trim()
+    }
+	</script>
 </body>
 </html>

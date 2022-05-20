@@ -60,6 +60,7 @@ video {
 
 /* vertical, aspect chiquito */
 @media (max-aspect-ratio: 9/16) {
+  /* video */
   .video_h {
   	display: none;
   } 
@@ -67,6 +68,16 @@ video {
     min-height: 100%;
   	display: inline;
   }
+
+  /* img */
+  .img_h {
+  	display: none;
+  } 
+  .img_v {
+    min-height: 100%;
+  	display: inline;
+  }
+
   .nav {
     font-size: x-large;
 		flex-flow: column;
@@ -84,6 +95,7 @@ video {
 
 /* horizontal, aspect grande */
 @media (min-aspect-ratio: 16/9) {
+  /* video */
   .video_h {
     min-width: 100%;
 		display: inline;
@@ -91,4 +103,18 @@ video {
   .video_v {
     display: none;
   }
+
+	/* img */
+  .img_h {
+    min-width: 100%;
+		display: inline;
+  }
+  .img_v {
+    display: none;
+  }
 }
+
+.hidden {
+	display: none;
+}
+
